@@ -201,7 +201,7 @@ class Requester(Thread):
 		self.ssl = False
 		self.req = []
 		self.lock=Lock()
-		url_type = urlparse.urlparse(self.tgt)
+		url_type = urllib.parse.urlparse(self.tgt)
 		if url_type.scheme == 'https':
 			self.ssl = True
 			if self.ssl == True:
