@@ -242,9 +242,9 @@ class Requester(Thread):
 	def run(self):
 		try:
 			if self.ssl:
-				conn = httplib.HTTPSConnection(self.tgt,self.port)
+				conn = http.client.HTTPSConnection(self.tgt,self.port)
 			else:
-				conn = httplib.HTTPConnection(self.tgt,self.port)
+				conn = http.client.HTTPConnection(self.tgt,self.port)
 				self.req.append(conn)
 			for reqter in self.req:
 				(url,http_header) = self.data()
